@@ -4,6 +4,7 @@ const mysql = require('mysql2');
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended : true }));
+app.use('/assets', express.static('assets'));
 
 const connection = mysql.createConnection({
 	host : 'localhost',
